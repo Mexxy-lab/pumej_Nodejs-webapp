@@ -8,7 +8,7 @@ pipeline {
     ACR_NAME = "pumejacr"
     registyUrl = "pumejacr.azurecr.io"
     IMAGE_NAME = "pumej_nodejs-webapp"
-    IMAGE_TAG = "v1.0.0"
+    IMAGE_TAG = "v1.1.0"
     registryCredential  = "pumej_acr-token"
     }
     stages {
