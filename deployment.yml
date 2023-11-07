@@ -16,7 +16,7 @@ spec:
         app: pumej-app
     spec:
       containers:
-        - name: pumej-container
+        - name: pumej_container
           image: pumejacr.azurecr.io/pumej_nodejs-webapp:v1.0.0
           ports:
             - containerPort: 3000
