@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pumej-deployment
+  namespace: default
+  labels:
+    app: pumej-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pumej-app
+  template:
+    metadata:
+      labels:
+        app: pumej-app
+    spec:
+      containers:
+        - name: pumej-container
+          image: pumejacr.azurecr.io/pumej_nodejs-webapp:v1.0.0
+          ports:
+            - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pumejnodejs-service
+spec:
+  selector:
+    app: pumej-app
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+  type: LoadBalancer
