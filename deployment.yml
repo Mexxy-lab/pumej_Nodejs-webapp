@@ -6,7 +6,7 @@ metadata:
   labels:
     app: pumej-app
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
       app: pumej-app
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: pumejcontainer
-          image: pumejacr.azurecr.io/pumej_nodejs-webapp:v1.0.0
+          image: pumejacr.azurecr.io/pumej_nodejs-webapp:v1.1.0
           ports:
             - containerPort: 3000
 ---
