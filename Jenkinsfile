@@ -14,7 +14,7 @@ pipeline {
     stages {
         stage('SCM Checkout') {
             steps{
-           git branch: 'master', url: 'https://github.com/Mexxy-lab/pumej_Nodejs-webapp.git'
+           git branch: 'master', url: 'https://github.com/Mexxy-lab/pumej_nodejs-webapp.git'
             }
         }
         // run sonarqube test
