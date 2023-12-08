@@ -1,3 +1,6 @@
 node_modules
 /pumej_aks_tf
 .env
+package-lock.json
+package.json
+server.js
